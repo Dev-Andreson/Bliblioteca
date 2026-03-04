@@ -13,22 +13,51 @@
     <meta property="og:site_name" content="Bliblioteca">
     <meta property="og:locale" content="pt_BR">
     <meta property="og:type" content="Site oficial da Biblioteca X com acervo de livros, artigos e materiais digitais para pesquisa.">
-    <link rel="stylesheet" href="">
-    <meta name="author" content="dev.andreson, Vinícius Galdino, Rogério">
-    <title>Bliblioteca</title>
+    <!-- Css Inicio-->
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <!-- Css Fim-->
+    <!-- JavaScript Inicio-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous" defer></script>
+    <!-- JavaScript Fim-->
+    <meta name="author" content="dev.andreson, Vinícius Galdino, Rogério, Emanuel">
+    <title>Bliblioteca Digital</title>
 </head>
 <body>
     <header>
-        
+        <nav class="navbar">
+            <div class="logo">
+                <img src="assets/midia/logo.png" alt="">
+            </div>
+            <ul>
+                <li><a href="src/cadastro/cadastro.html">Cadastre-se</a></li>
+                <li><a href="src/livros/livros.html">Entrar</a></li>
+            </ul>
+        </nav>
     </header>
 
     <main>
+
+        <section class="hero-section">
+            <div class="container">
+                <div class="row">
+                    <div class="card-apresentacao">
+                        <h2>Comece sua leitura com a Biblioteca Digital</h2>
+                        <h4>Livros de ação, comédia, romance e muito mais.</h4>
+                        <p>Faça a sua pesquisa e comece a ler.</p>
+                    </div>
+                    <div class="card-pesquisa">
+                        <input type="seacher" type="text" placeholder="Buscar...">
+                        <button type="button">Buscar</button>
+                    </div>
+                </div>
+            </div>
+        </section>
 
     </main>
 
     <footer>
         
     </footer>
-    
 </body>
 </html>

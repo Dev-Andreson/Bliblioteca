@@ -4,11 +4,113 @@
     outline: none;
     text-decoration: none;
     list-style: none;
+    font-family: 'Poppins', sans-serif;
     box-sizing: border-box;
 }
 
+body {
+    padding: 15px 0;
+}
+
 .container {
-    max-width: 1400px;
-    padding: 0 16px;
+    max-width: 1200px;
+    padding: 100px 16px;
     height: auto;
+}
+
+header {
+    position: absolute;
+    z-index: 1;
+    left: 300px;
+    width: 50%;
+
+    .navbar {
+        padding: 0 100px;
+
+        .logo {
+            width: 100px;
+            height: 100px;
+
+            img {
+                width: 100%;
+                height: 100%;
+            }
+        }
+
+        ul {
+            display: flex;
+            gap: 20px;
+
+            li {
+
+                a {
+                    background-color: red;
+                    padding: 10px;
+                    border-radius: 4px;
+                    text-decoration: none;
+                    color: white;
+                }
+            }
+        }
+    }
+}
+
+main {
+    width: 1305px;
+    position: absolute;
+    z-index: 0;
+
+    .hero-section {
+        height: 650px;
+        background-image: url("assets/midia/background.png");
+
+            .container {
+                height: 100%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+
+                .row {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+
+                    .card-apresentacao {
+                        width: 60%;
+                        text-align: center;
+
+                        h2 {
+                            font-size: 50px;
+                            font-weight: 800;
+                        }
+                    }
+
+                    .card-pesquisa {
+                        display: flex;
+                        justify-content: center;
+                        gap: 10px;
+                        
+                        input {
+                            border-radius: 4px;
+                            border: 1px solid #7e7c7c;
+                            background-color: transparent;
+                            width: 500px;
+                            height: 60px;
+                            padding: 10px;
+                        }
+
+                        button {
+                            padding: 10px 60px;
+                            text-align: center;
+                            border-radius: 4px;
+                            border: 1px solid #b39b9b;
+                            background-color: red;
+                            font-size: 20px;
+                            font-weight: 600;
+                            color: white;
+                        }
+                    }
+                }
+            }
+        }
 }
