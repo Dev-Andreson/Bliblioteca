@@ -1,0 +1,36 @@
+* {
+    padding: 0;
+    margin: 0;
+    outline: none;
+    text-decoration: none;
+    list-style: none;
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+}
+
+.container {
+    max-width: 1200px;
+    padding: 100px 16px;
+    height: auto;
+}
+
+.card-container {
+    margin: 15px 0 15px 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+}
+
+.card {
+    flex: 0 0 calc(24.3% - 15px);
+}
+
+.card img {
+    width: 300px;
+    height: 200px;
+}
+
+.card-body {
+    width: 300px;
+}

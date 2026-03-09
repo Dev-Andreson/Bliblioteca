@@ -49,6 +49,10 @@ header {
                     border-radius: 4px;
                     text-decoration: none;
                     color: white;
+
+                    &:hover {
+                        background-color: rgb(218, 5, 5);
+                    }
                 }
             }
         }
@@ -64,53 +68,89 @@ main {
         height: 650px;
         background-image: url("assets/midia/background.png");
 
-            .container {
-                height: 100%;
+        .container {
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            .row {
                 display: flex;
                 justify-content: center;
                 align-items: center;
 
-                .row {
+                .card-apresentacao {
+                    width: 60%;
+                    text-align: center;
+
+                    h2 {
+                        font-size: 50px;
+                        font-weight: 800;
+                    }
+                }
+
+                .card-pesquisa {
                     display: flex;
                     justify-content: center;
-                    align-items: center;
-
-                    .card-apresentacao {
-                        width: 60%;
-                        text-align: center;
-
-                        h2 {
-                            font-size: 50px;
-                            font-weight: 800;
-                        }
+                    gap: 10px;
+                        
+                    input {
+                        border-radius: 4px;
+                        border: 1px solid #7e7c7c;
+                        background-color: transparent;
+                        width: 500px;
+                        height: 60px;
+                        padding: 10px;
                     }
 
-                    .card-pesquisa {
-                        display: flex;
-                        justify-content: center;
-                        gap: 10px;
-                        
-                        input {
-                            border-radius: 4px;
-                            border: 1px solid #7e7c7c;
-                            background-color: transparent;
-                            width: 500px;
-                            height: 60px;
-                            padding: 10px;
-                        }
+                    button {
+                        padding: 10px 60px;
+                        text-align: center;
+                        border-radius: 4px;
+                        border: 1px solid #b39b9b;
+                        background-color: red;
+                        font-size: 20px;
+                        font-weight: 600;
+                        color: white;
 
-                        button {
-                            padding: 10px 60px;
-                            text-align: center;
-                            border-radius: 4px;
-                            border: 1px solid #b39b9b;
-                            background-color: red;
-                            font-size: 20px;
-                            font-weight: 600;
-                            color: white;
+                        &:hover {
+                            background-color: rgb(218, 5, 5);
                         }
                     }
                 }
             }
         }
+    }
+
+    .carrosel {
+
+        .container {
+
+            .row {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+
+                h1 {
+                    font-size: 30px;
+                    margin-bottom: 30px;
+                }
+
+                .card-container {
+                    display: flex;
+                    justify-content: center;
+                    gap: 50px;
+
+                    .card {
+                        
+                        img {
+                            width: 287px;
+                            height: 300px;
+                        }
+                    }
+                }
+            }
+        }
+    }
 }
+
