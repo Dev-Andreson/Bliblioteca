@@ -60,13 +60,20 @@ header {
 }
 
 main {
-    width: 1305px;
+    width: 100%;
     position: absolute;
     z-index: 0;
 
+    img {
+        width: 100%;
+        overflow-x: none;
+        position: absolute;
+    }
+
     .hero-section {
+        width: clamp(100%, 50%, 100%);
         height: 650px;
-        background-image: url("assets/midia/background.png");
+        position: relative;
 
         .container {
             height: 100%;
