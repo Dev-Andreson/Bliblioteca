@@ -49,9 +49,10 @@
                         <p>Faça a sua pesquisa e comece a ler.</p>
                     </div>
                     <div class="card-pesquisa">
-                        <input type="seacher" type="text" placeholder="Buscar...">
-                        <button type="button">Buscar</button>
+                        <input id="search-input" type="text" placeholder="Buscar...">
+                        <button id="search-btn" type="button">Buscar</button>
                     </div>
+                    <div id="results" class="card-container"></div>
                 </div>
             </div>
         </section>
@@ -95,5 +96,6 @@
     <footer>
         
     </footer>
+    <script src="src/api/api.js" defer></script>
 </body>
 </html>
