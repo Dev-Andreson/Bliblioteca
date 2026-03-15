@@ -1,3 +1,7 @@
+:root {
+    --btn-bg-color: rgb(86, 146, 26);
+}
+
 * {
     padding: 0;
     margin: 0;
@@ -14,23 +18,52 @@
     height: auto;
 }
 
-.card-container {
-    margin: 15px 0 15px 0;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 15px;
-}
+header {
 
-.card {
-    width: width: clamp(300px, 50%, 400px);
-}
+    nav {
 
-.card img {
-    width: 100%;
-    height: 200px;
-}
+        .container-fluid {
+            padding: 0 5%;
+            display: flex;
+            justify-content: space-evenly;
 
-.card-body {
-    width: 300px;
+            .navbar-brand {
+                font-size: 30px;
+                font-weight: 600;
+                font-family: 'poppins', sans-serif;
+            }
+
+            .collapse {
+                flex-grow: 0;
+
+                form {
+
+                    input {
+                        padding: 10px 20em 10px 10px;
+                        border: 1px solid #ccc;
+                        border-radius: 5px;
+                    }
+                }
+            }
+
+            .login {
+                display: flex;
+                gap: 20px;
+
+                a {
+                    color: #ffffff;
+                    font-size: 18px;
+                    font-weight: 500;
+                    padding: 10px;
+                    border-radius: 5px;
+                    background-color: var(--btn-bg-color);
+                    transition: 0.3s;
+
+                    &:hover {
+                        background-color: rgb(86, 146, 26, 0.8);
+                    }
+                }
+            }
+        }
+    }
 }
