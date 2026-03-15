@@ -31,7 +31,7 @@ function renderBooks(books) {
             <div class="card-body">
                 <h6>${info.title || "Sem título"}</h6>
                 <p>${info.authors?.join(", ") || "Autor desconhecido"}</p>
-                <a href="${info.previewLink}" target="_blank" class="btn btn-primary">Ler</a>
+                <a href="${info.previewLink}" target="_blank" class="btn btn-primary">Ler Agora</a>
             </div>
         </div>
         `;

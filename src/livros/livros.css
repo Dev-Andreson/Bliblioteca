@@ -14,7 +14,7 @@
 
 .container {
     max-width: 1200px;
-    padding: 100px 16px;
+    padding: 0;
     height: auto;
 }
 
@@ -62,6 +62,43 @@ header {
                     &:hover {
                         background-color: rgb(86, 146, 26, 0.8);
                     }
+                }
+            }
+        }
+    }
+}
+
+
+main {
+
+    .result {
+
+        .card {
+            width: 250px;
+            height: 550px !important;
+            margin: 30px;
+            padding: 0;
+
+            img {
+                width: 100%;
+                height: auto;
+            }
+
+            .card-body {
+                width: 100%!important;
+                
+                h6 {
+                    white-space: nowrap!important;
+                    overflow: hidden!important;
+                    text-overflow: ellipsis!important;
+                    font-size: 18px;
+                    font-weight: 600;
+                }
+
+                p {
+                    white-space: nowrap!important;
+                    overflow: hidden!important;
+                    text-overflow: ellipsis!important;
                 }
             }
         }
