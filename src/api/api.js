@@ -58,6 +58,22 @@ document.addEventListener("DOMContentLoaded", () => {
 
 });
 
+document.addEventListener("DOMContentLoaded", () => {
+
+    const btn = document.getElementById('search-btn-seg');
+
+    btn.addEventListener('click', () => {
+
+        const query = document.getElementById('search-input-seg').value.trim();
+
+        if (!query) return;
+
+        window.location.href = `livros.html?q=${encodeURIComponent(query)}`;
+
+    });
+
+});
+
 function getQueryParam() {
     const params = new URLSearchParams(window.location.search);
     return params.get("q");
