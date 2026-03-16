@@ -1,0 +1,13 @@
+body { background-color: #f4f7ff; }
+
+header nav { background-color: #fff; }
+
+h1 { color: #2c3e50; }
+
+.card { border-radius: 12px; }
+
+#alert { transition: all .2s ease; }
+
+@media (max-width: 767px) {
+    .card { margin: 0 10px; }
+}

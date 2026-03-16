@@ -4,33 +4,96 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="Description" content="">
-    <meta name="Keywords" content="Leitura, Livros, Estudos, Pesquisa, Alunos, Bliblioteca, Fantasia, Drama, Romance">
+    <meta name="Description" content="Cadastro de usuários da Biblioteca">
+    <meta name="Keywords" content="Cadastro, Biblioteca, Usuário, Bliblioteca">
     <link rel="apple-touch-icon" sizes="180x180" href="/imagens/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="/imagens/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="/imagens/favicon-16x16.png">
-    <link rel="manifest" href="/semear/site.webmanifest">
     <meta property="og:site_name" content="Bliblioteca">
     <meta property="og:locale" content="pt_BR">
-    <meta property="og:type" content="Site oficial da Biblioteca X com acervo de livros, artigos e materiais digitais para pesquisa.">
-    <link rel="stylesheet" href="">
+    <meta property="og:type" content="Cadastro de usuário para Biblioteca">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link rel="stylesheet" href="cadastro.css">
     <meta name="author" content="dev.andreson, Vinícius Galdino, Rogério">
-    <title>Bliblioteca Digital</title>
+    <title>Cadastro - Bliblioteca</title>
 </head>
 <body>
-
-    <main>
-        <section>
-            <div class="container">
-                <div class="row">
-                    <form action="">
-                        
-                    </form>
+    <header>
+        <nav class="navbar navbar-expand-lg bg-body-tertiary mb-4">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="../../index.html">Bliblioteca</a>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item"><a class="nav-link" href="../../index.html">Início</a></li>
+                        <li class="nav-item"><a class="nav-link" href="../livros/livros.html">Buscar Livros</a></li>
+                    </ul>
                 </div>
-                <div class="row"></div>
+            </div>
+        </nav>
+    </header>
+
+    <main class="container mb-5">
+        <section class="row justify-content-center">
+            <div class="col-12 col-md-8">
+                <div class="card shadow-sm">
+                    <div class="card-body">
+                        <h1 class="h3 mb-3">Cadastro de Usuário</h1>
+                        <p class="text-muted">Crie sua conta e acesse o sistema de biblioteca.</p>
+
+                        <div id="alert" class="alert d-none" role="alert"></div>
+
+                        <form id="register-form" novalidate>
+                            <div class="mb-2"><a href="login.html">Já tem conta? Faça login</a></div>
+                            <div class="mb-3">
+                                <label for="name" class="form-label">Nome completo</label>
+                                <input type="text" id="name" class="form-control" placeholder="Digite seu nome" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="email" class="form-label">E-mail</label>
+                                <input type="email" id="email" class="form-control" placeholder="seu@exemplo.com" required>
+                            </div>
+                            <div class="row g-3">
+                                <div class="col-md-6 mb-3">
+                                    <label for="password" class="form-label">Senha</label>
+                                    <input type="password" id="password" class="form-control" placeholder="Mínimo 6 caracteres" required>
+                                </div>
+                                <div class="col-md-6 mb-3">
+                                    <label for="confirmPassword" class="form-label">Confirmar senha</label>
+                                    <input type="password" id="confirmPassword" class="form-control" placeholder="Repita a senha" required>
+                                </div>
+                            </div>
+                            <div class="mb-3">
+                                <label for="course" class="form-label">Curso</label>
+                                <input type="text" id="course" class="form-control" placeholder="Ex: Administração" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="turn" class="form-label">Turno</label>
+                                <select id="turn" class="form-select" required>
+                                    <option value="">Escolha um turno</option>
+                                    <option value="Manhã">Manhã</option>
+                                    <option value="Tarde">Tarde</option>
+                                    <option value="Noite">Noite</option>
+                                </select>
+                            </div>
+                            <button type="submit" class="btn btn-primary w-100">Cadastrar</button>
+                        </form>
+                    </div>
+                </div>
+
+                <div class="card shadow-sm mt-4">
+                    <div class="card-body">
+                        <div class="d-flex justify-content-between align-items-start">
+                            <div>
+                                <h2 class="h5">Usuários cadastrados</h2>
+                            </div>
+                            <button id="clear-storage" class="btn btn-outline-danger btn-sm">Limpar banco</button>
+                        </div>
+                        <div id="users-list" class="table-responsive"></div>
+                    </div>
+                </div>
             </div>
         </section>
     </main>
 
+    <script src="cadastro.js" defer></script>
 </body>
-</html>
